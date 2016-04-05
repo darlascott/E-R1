@@ -9,7 +9,7 @@ Drop(){
   y = -r*4;
   x = random(width);
   speed = random(1,5);
-  c = color(50,100,150);
+  c = color(random(255),random(225),random(225));
   
 }
 void move(){
@@ -28,5 +28,12 @@ if (y > height + r*4){
 } else { 
   return false;
 }
+}
+//function for when drop is caught
+void caught(){
+  //drop stop or stop drop
+  speed = 0;
+  //move drop
+  y = -1000;
 }
 }

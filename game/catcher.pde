@@ -18,4 +18,14 @@ class Catcher {
     fill(col);
     ellipse(x,y,r*2,r*2);
   }
+  //function for drop/catcher intersection
+  // TRUE OR FALSE
+  boolean intersection(Drop d){
+    //calc distancde btwn catcher and drop
+    float distance = dist(x,y,d.x,d.y);
+    //compare distance
+    if(distance < r + d.r){
+      return true;
+    } else {
+      return false; }}
 }
